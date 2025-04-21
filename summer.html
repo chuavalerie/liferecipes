@@ -16,8 +16,9 @@
 </head>
 <body class="summer">
     <header id="navbar">
+        <a class = "skip" href="#main">Skip to Main content</a>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.svg"></a>
+            <a href="index.html"><img src="images/logo.svg" alt="Text logo that reads Life Recipes"></a>
         </div>
         <nav class="navigation">
             <a href = "index.html">Home</a>
@@ -28,16 +29,17 @@
             <a href = "guest.html">Guest Recipes</a>
         </nav>
         <div class="toggleBox">
-            <a onclick="showMenu()" href="#"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+            <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
         </div>
     </header>
 
     <div class="content">
+    <main>
         <h1>Summer☀</h1>
         <h5>There’s something about the sky — its warmth, its light. A smile forms, a soft breath escapes. How wonderful it all feels.</h5>
         <br>
         <blockquote>“I never get tired of the blue sky.” - Vincent Van Gogh</blockquote>
-        <div class="first-fold"><img src="images/summer1.jpeg"><img src="images/summer2.jpeg"></div>
+        <div class="first-fold"><img src="images/summer1.jpeg" alt="Curved gravel path in a sunny park lined with green trees. A group of people walks under a clear blue sky with dappled clouds."><img src="images/summer2.jpeg" alt="Sunlit concrete pathway curves through a grassy park, with tree shadows creating patterns on the path."></div>
         <hr>
     </div>
 
@@ -72,10 +74,11 @@
         <hr>
     </div>
 
+</main>
     <footer class="footer">
         <h4>valeriechua</h4>
-        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg"></a>
-        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg"></a>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
     </footer>
 
     <!-- Mobile navigation menu -->
