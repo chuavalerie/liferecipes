@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/bread.svg">
+
+    <title>Guest Recipes</title>
+</head>
+<body class="default">
+    <header id="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg"></a>
+        </div>
+        <nav class="navigation">
+            <a class="active" aria-current="page" href = "index.html">Home</a>
+            <a href = "spring.html">Spring</a>
+            <a href = "summer.html">Summer</a>
+            <a href = "autumn.html">Autumn</a>
+            <a href = "winter.html">Winter</a>
+            <a href = "guest.html">Guest Recipes</a>
+        </nav>
+        <div class="toggleBox">
+            <a onclick="showMenu()" href="#"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Guest Recipes</h1>
+        <h5>Join me to embark on a new journey. Remember, you’re the star in your life. Wishing you a wonderful one.</h5>
+        <hr>
+    </div>
+
+    <footer class="footer">
+        <h4>valeriechua</h4>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg"></a>
+    </footer>
+
+    <!-- Mobile navigation menu -->
+    <script>
+        function showMenu() {
+        document.querySelector('.navigation').classList.toggle('now');
+        document.querySelector('.menu').classList.toggle('hide');
+        document.querySelector('.close').classList.toggle('show');
+        document.body.classList.toggle('no-scroll');
+    }
+    </script>
+
+</body>
+</html>

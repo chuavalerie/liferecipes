@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/bread.svg">
+
+    <title>Spring</title>
+</head>
+<body class="spring">
+    <header id="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg"></a>
+        </div>
+        <nav class="navigation">
+            <a href = "index.html">Home</a>
+            <a class="active" aria-current="page" href = "spring.html">Spring</a>
+            <a href = "summer.html">Summer</a>
+            <a href = "autumn.html">Autumn</a>
+            <a href = "winter.html">Winter</a>
+            <a href = "guest.html">Guest Recipes</a>
+        </nav>
+        <div class="toggleBox">
+            <a onclick="showMenu()" href="#"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Spring☂</h1>
+        <h5>Setting aside Winter’s unfinished business and chilly temperament, Spring might be one of my favourite things.</h5>
+        <br>
+        <blockquote>"Every day I discover more and more beautiful things." - Claude Monet</blockquote>
+        <div class="first-fold"><img src="images/spring1.jpeg"><img src="images/spring2.jpeg"></div>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>A recipe for new beginnings</h2>
+        <p>You’re feeling tired and dreary, but then you notice greens, reds, and tiny buds sprouting. You look up—flowers, oh flowers, all around.</p>
+        <br>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Floral prints</li>
+            <li>A fellow cup (for coffee or tea)</li>
+            <li>Linen tops</li>
+            <li>Light cardigans</li>
+            <li>Pastel skirts</li>
+        </ul>
+        <h3>Instructions</h3>
+        <ol>
+            <li>Pull the blinds and let the sunlight pour through open windows — fresh and fragrant.</li>
+            <li>Let out a light sigh. Indulge in colour — both around you and within you.</li>
+            <li>Dress yourself in blossoms: soft linen, pastel layers, and light cardigans.</li>
+            <li>Pour a fellow cup, swirl the ice, and feel the gladness bloom from the inside out.</li>
+        </ol>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>Featured Music</h2>
+        <p>Here's a cheery music to make you feel energized again.</p>
+        <br>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6dGnYIeXmHdcikdzNNDMm2?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <footer class="footer">
+        <h4>valeriechua</h4>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg"></a>
+    </footer>
+
+    <!-- Mobile navigation menu -->
+    <script>
+        function showMenu() {
+            document.querySelector('.navigation').classList.toggle('now');
+            document.querySelector('.menu').classList.toggle('hide');
+            document.querySelector('.close').classList.toggle('show');
+            document.body.classList.toggle('no-scroll');
+        }
+    </script>
+
+</body>
+</html>

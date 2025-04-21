@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/bread.svg">
+
+    <title>Summer</title>
+</head>
+<body class="summer">
+    <header id="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg"></a>
+        </div>
+        <nav class="navigation">
+            <a href = "index.html">Home</a>
+            <a href = "spring.html">Spring</a>
+            <a class="active" aria-current="page" href = "summer.html">Summer</a>
+            <a href = "autumn.html">Autumn</a>
+            <a href = "winter.html">Winter</a>
+            <a href = "guest.html">Guest Recipes</a>
+        </nav>
+        <div class="toggleBox">
+            <a onclick="showMenu()" href="#"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Summer☀</h1>
+        <h5>There’s something about the sky — its warmth, its light. A smile forms, a soft breath escapes. How wonderful it all feels.</h5>
+        <br>
+        <blockquote>“I never get tired of the blue sky.” - Vincent Van Gogh</blockquote>
+        <div class="first-fold"><img src="images/summer1.jpeg"><img src="images/summer2.jpeg"></div>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>A recipe for golden moments</h2>
+        <p>It’s that golden hour, that rim of light that illuminates your face. Simmer in joy and remember you’re unapologetically alive.</p>
+        <br>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Cap</li>
+            <li>Necklaces</li>
+            <li>Denim shorts</li>
+            <li>Lace and cottom</li>
+            <li>Sandals</li>
+            <li>Frilly dresses</li>
+        </ul>
+        <h3>Instructions</h3>
+        <ol>
+            <li>Layer cotton and lace over sun-kissed skin — light and airy, dancing in the beams of golden light.</li>
+            <li>Clip your hair up, slide on your sandals, and let your ankles meet the breeze.</li>
+            <li>Top it off with a boyish cap, stack your necklaces, and carry your sense of wonder.</li>
+            <li>Chase golden hours — with your eyes, not your phone — and bask in conversations that fill your heart with ease.</li>
+        </ol>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>Featured Spot</h2>
+        <p>Here’s sunny Singapore’s favourite garden — loved all year round. Well, it’s summer all year, so that checks out.</p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.640565502835!2d103.861038276997!3d1.2815736617872824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1904937e1633%3A0x62099677b59fca76!2sGardens%20by%20the%20Bay!5e0!3m2!1sen!2sus!4v1744686232917!5m2!1sen!2sus" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <hr>
+    </div>
+
+    <footer class="footer">
+        <h4>valeriechua</h4>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg"></a>
+    </footer>
+
+    <!-- Mobile navigation menu -->
+    <script>
+        function showMenu(){
+            document.querySelector('.navigation').classList.toggle('now');
+            document.querySelector('.menu').classList.toggle('hide');
+            document.querySelector('.close').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
