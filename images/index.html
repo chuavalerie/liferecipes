@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/bread.svg">
+
+    <title>Home Page</title>
+</head>
+<body class="default">
+    <header id="navbar">
+        <a class = "skip" href="#main">Skip to Main content</a>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg" alt="Text logo that reads Life Recipes"></a>
+        </div>
+        <nav class="navigation">
+            <a class="active" aria-current="page" href = "index.html">Home</a>
+            <a href = "spring.html">Spring</a>
+            <a href = "summer.html">Summer</a>
+            <a href = "autumn.html">Autumn</a>
+            <a href = "winter.html">Winter</a>
+            <a href = "guest.html">Guest Recipes</a>
+        </nav>
+        <div class="toggleBox">
+            <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+        </div>
+    </header>
+
+    <div class="content">
+    <main>
+        <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>.
+            And a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
+            and that sort of thing ♡.</h1>
+
+        <!-- Floating image that follows cursor -->
+        <img class="hover-image">
+
+        <h5>A collection of my ingredients—ideas, moments, feelings— the mix that makes a meaningful life.</h5>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>What’s on my Kitchen Table</h2>
+        <p>My mind’s erratic and change like the seasons, but for now here’s my jam. Obviously, nature.</p>
+        <br>
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1"><img src="images/mountain1.jpg" alt="A few people standing n a hillside photographing a misty volcanic landscape at sunrise with mountains and clouds in the background."></div>
+            <div class="item" style="--position: 2"><img src="images/mountain2.jpg" alt="A bright blue sky with scattered clouds over a road, cars, trees, and buildings."></div>
+            <div class="item" style="--position: 3"><img src="images/mountain3.jpg" alt="Sunset over a grassy field with trees casting long shadows. The sky is a gradient of orange and blue."></div>
+            <div class="item" style="--position: 4"><img src="images/mountain4.jpg" alt="Scenic view of misty volcanic landscape partially covered by fluffy white clouds at sunrise."></div>
+            <div class="item" style="--position: 5"><img src="images/mountain5.jpg" alt="Image of tall trees viewed from below. Their branches and leaves creating an intricate lace-like pattern against the sky."></div>
+            <div class="item" style="--position: 6"><img src="images/mountain6.jpg" alt="Open rural road under a clear blue sky with a few pink clouds at sunset. Trees and grassy fields line the road."></div>
+            <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs, and misty clouds under a clear blue sky."></div>
+            <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky."></div>
+            <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field with golden light casting long shadows. The sky is clear with a soft gradient from blue to orange."></div>
+            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Lush garden with vibrant yellow flowers, trimmed hedges, and a stone pathway under a bright blue sky with fluffy clouds."></div>
+        </div>
+        <div class="model"></div>
+        <div class="controls">
+            <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+            <div class="counter"><h4 id="slideCounter">1 / 10</h4></div>
+            <a class="next" onclick="plusSlides(1)">&gt;</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="content">
+        <h2>Get Inspired</h2>
+        <p>There’s a season for everything.</p>
+        <br>
+        <div class="seasons">
+            <a href = "spring.html"><figure><img src="images/spring.png" alt="A green ceramic cup filled with a latte with leaf-shaped latte art on creamy foam.">
+                <figcaption><h4>spring -></h4></figcaption></a>
+            </figure>
+            <a href = "summer.html"><figure><img src="images/summer.png" alt="A dark, ceramic mug filled with frothy, creamy coffee.">
+                <figcaption><h4>summer -></h4></figcaption></a>
+            </figure>
+            <a href = "autumn.html"><figure><img src="images/autumn.png" alt="A frothy matcha latte in a ceramic cup with leaf-shaped latte art and swirling green and white patterns.">
+                <figcaption><h4>autumn -></h4></figcaption></a>
+            </figure>
+            <a href = "winter.html"><figure><img src="images/winter.png" alt="A frothy latte in a rustic gray ceramic mug, with swirled milk foam.">
+                <figcaption><h4>winter -></h4></figcaption></a>
+            </figure>
+        </div>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>Eye my Pantry Staples</h2>
+        <p>My go-to grounding tools.</p>
+        <ul class="staples">
+            <li class="staple">
+                <img src="images/quill.svg" alt="Pixel icon of a quill dipped in a pot of ink.">
+                <div>
+                    <h4>Gratitude Journal</h4>
+                    <p>Inspired by <a class="link" href="https://gretchenrubin.com/books/the-happiness-project/">Gretchen Rubin's The Happiness Project</a>, I have a similar variation of my own. </p>
+                </div>
+            </li>
+            <li class="staple">
+                <img src="images/letter.svg" alt="Pixel icon of a letter with a heart-shaped icon in an envelope.">
+                <div>
+                    <h4>Perk me up quotes</h4>
+                    <p>I keep a stash of quotes to remind myself of the many blessings in life. Check out my kitchen jam but oh boy, I love <a class="link" href="https://www.instagram.com/tolivehappy_/">@tolivehappy_</a>!</p>
+                </div>
+            </li>
+            <li class="staple">
+                <img src="images/tree.svg" alt="Pixel icon of a tree.">
+                <div>
+                    <h4>Nature & Sunlight</h4>
+                    <p>Nothing reminds you better of how fragile life is than nature.</p>
+                </div>
+            </li>
+            <li class="staple">
+                <img src="images/cloud.svg" alt="Pixel icon of a cloud with the sun peeking behind.">
+                <div>
+                    <h4>Running</h4>
+                    <p>There's something about the wind blowing in your face, the aches in your legs and just letting your mind and body be free.</p>
+                </div>
+            </li>
+            <li class="staple">
+                <img src="images/heart.svg" alt="">
+                <div>
+                    <h4>Friends & Family</h4>
+                    <p>Keep people who you can be yourself with, close to you.</p>
+                </div>
+            </li>
+        </ul>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>Ask Me</h2>
+        <button class="accordion">What makes life worth living?</button>
+        <div class="panel">
+            <p>This is a million dollar question.  Honestly, I don't think there's a real reason to live — we're just passersby in this metaverse of life. But there's no reason not to live, either. So I guess we just make do with what we have and enjoy it while we can.</p>
+        </div>
+
+        <button class="accordion">How do you stay positive?</button>
+        <div class="panel">
+            <p>I think it boils down to being grateful and counting our blessings. I don’t do this well all the time, but I try when I can. Sometimes, you look back and realize that the things that mattered then don’t really matter at all. We just don’t know it yet. We are mere dust in this vast world. I guess that’s why I love nature — it reminds me how fragile life is and how insignificant my worries can be.</p>
+        </div>
+
+        <button class="accordion">What makes you smile?</button>
+        <div class="panel">
+            <p>Lots of things, in particular — nature, sunlight, the people I love, archaeology, history, running, chick flicks, comedies — and the list goes on. Having a wonderful conversation with someone, or simply feeling that life is great, makes me happy too.</p>
+        </div>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h2>About Me</h2>
+        <p>I’m a big girl living in a huge place <i class="em em-us" aria-role="presentation" aria-label="United States Flag"></i> , from a tiny dot <i class="em em-flag-sg" aria-role="presentation" aria-label="Singapore Flag"></i> .</p>
+        <img class="me" src="images/me.png" alt="A 3D female character with dark hair tied up in a ponytail, with pink glasses, checkered pink jacket, and black pants standing cheerfully against a mountain view.">
+        <blockquote>“Who says only the big things in life are worth celebrating?” - Me</blockquote>
+    </div>
+</main>
+    <footer class="footer">
+        <h4>valeriechua</h4>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
+    </footer>
+
+    <!-- Mobile navigation menu -->
+    <script>
+        function showMenu() {
+        document.querySelector('.navigation').classList.toggle('now');
+        document.querySelector('.menu').classList.toggle('hide');
+        document.querySelector('.close').classList.toggle('show');
+        document.body.classList.toggle('no-scroll');
+    }
+    </script>
+
+    <!-- Disable 3d for reduced motion -->
+    <script>
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            enableBannerSlideshow();
+        }
+
+        function enableBannerSlideshow() {
+            const slides = document.querySelectorAll('.banner .slider .item');
+            let slideIndex = 0;
+
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[slideIndex].style.display = 'block';
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.style.display = 'none');
+                slideIndex = (n + slides.length) % slides.length;
+                slides[slideIndex].style.display = 'block';
+                document.getElementById('slideCounter').textContent = `${slideIndex + 1} / ${slides.length}`;
+            }
+
+            document.querySelector('.banner .prev').onclick = () => showSlide(slideIndex - 1);
+            document.querySelector('.banner .next').onclick = () => showSlide(slideIndex + 1);
+        }
+        </script>
+
+    <!-- Accordion from w3schools -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+    <!-- Desktop hover -->
+    <script src="js/hover.js"></script>
+</body>
+</html>

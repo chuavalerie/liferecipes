@@ -1,0 +1,616 @@
+/* Skip */
+.skip{
+    position: absolute;
+    top: -100%;
+}
+
+a:focus {
+    top: 5%;
+    left: 10%;
+    padding: 4%;
+    background-color: white;
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Fonts */
+h1,h2,h3,h4,h5,a{
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 120%;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+h2{
+    font-size: 2rem;
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h4{
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+h5{
+    font-family: "News Cycle", sans-serif;
+    font-size: 1.5rem;
+}
+
+p, li{
+    font-family: "News Cycle", sans-serif;
+    font-size: 1.125rem;
+    line-height: 140%;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.link{
+    font-family: "News Cycle", sans-serif;
+    font-size: 1.125rem;
+    text-decoration: underline;
+}
+
+.link:hover{
+    color: darkcyan;
+}
+
+blockquote{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 120%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+/* Page colour */
+/* Default fallback */
+.default, .navigation.now {
+    background-color: #FBFAFA;
+}
+
+/* Spring Theme */
+.spring, .spring .navigation.now {
+    background: #F3FFEC; /* light green */
+}
+
+/* Summer Theme */
+.summer, .summer .navigation.now {
+    background: #FEFCEA; /* light yellow */
+}
+
+/* Autumn Theme */
+.autumn, .autumn .navigation.now {
+    background: #FAF1E8; /* dusty orange */
+}
+
+/* Winter Theme */
+.winter, .winter .navigation.now {
+    background: #DBEBFF; /* icy blue */
+}
+
+/* Navigation */
+header{
+    background-color: inherit;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: .5rem;
+}
+
+.navigation{
+    display: none;
+}
+
+.toggleBox {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1001; /* higher than .navigation.active */
+}
+
+.navigation.now{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;
+    z-index: 999;
+}
+
+.navigation.now a{
+    padding: .8rem;
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+img.close{
+    display: none;
+}
+
+.menu.hide {
+    display: none;
+}
+
+.close.show {
+    display: inline;
+}
+
+/* Sticky nav */
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.content{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.seasons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end
+}
+
+figure{
+    width: 50%;
+}
+
+figure img{
+    margin-top: .5rem;
+    width: 80%;
+}
+
+figcaption{
+    padding-top: .5rem;
+}
+
+hr{
+    margin-top: 2.5rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid black;
+    margin-top: 6rem;
+}
+
+.footer a{
+    padding-left: 8px;
+}
+
+/* Banner from Lun Dev Code https://www.youtube.com/watch?v=yqaLSlPOUxM*/
+.banner{
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; For debugging */
+}
+
+.banner .slider{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    top: 20%;
+    left: calc(50% - 50px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(265px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content .model{
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+
+/* Kitchen Table slideshow */
+.slideshow{
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.slideshow img{
+    width: 90%;
+    padding: 1rem;
+    position: relative;
+    z-index: -1;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.prev, .next{
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.counter h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* Ask me accordion */
+.accordion {
+    background-color: #FBFAFA;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    transition: 0.4s;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 1.1rem;
+}
+
+button.active, .accordion:hover {
+    background-color: black;
+    color: white;
+}
+
+.panel {
+    padding: 0 1rem;
+    display: none;
+    background-color: #FBFAFA;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 90%;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: black;
+    float: right;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+    color: white;
+}
+
+button.accordion:hover::after {
+    color: white;
+}
+
+/* Pantry staples */
+ul .staples{
+    gap: 0.8125rem;
+    display: flex;
+}
+.staple{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8125rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+ul.staples li.staple:last-child {
+    margin-bottom: 0;
+}
+
+.staple h4{
+    margin-bottom: 0;
+}
+
+/* Me */
+.me{
+     width: 50%;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+}
+
+/* Season header images */
+.first-fold{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1rem 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 1.5rem;
+}
+
+.first-fold :first-child{
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/5;
+}
+
+.first-fold :last-child{
+    width: 100%;
+    grid-column: 4/6;
+    grid-row: 2/6;
+}
+
+/* Autumn images */
+.image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .image-stack__item {
+    grid-row: 1;
+    position: relative;
+  }
+
+  .image-stack__item--top {
+    grid-column: 1 / span 10;
+    padding-top: 2rem;
+    z-index: 2;
+  }
+
+  .image-stack__item--bottom {
+    grid-column: 4 / -1;
+    z-index: 1;
+  }
+
+  .image-stack img {
+    width: 100%;
+    display: block;
+  }
+
+/* Recipe list */
+ul li{
+    list-style: square;
+    margin-left: 2rem;
+}
+
+ul li:last-child{
+    margin-bottom: 1rem;
+}
+
+ol li{
+    list-style: decimal;
+    margin-left: 2rem;
+}
+
+/* Hover disabled */
+.hover{
+    display: none;
+}
+
+/* Banner remove controls */
+.banner .controls {
+    display: none;
+  }
+
+/* Desktop */
+@media screen and (min-width: 991px){
+    /* Fonts */
+    h1{
+        font-size: 3.5rem;
+        width: 75%;
+    }
+
+    h5{
+        width: 60%;
+    }
+
+    /* Navigation bar */
+    .navigation{
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .toggleBox{
+        display: none;
+    }
+
+    .navigation.now {
+        /* disable full screen nav in desktop */
+        all: unset;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navigation a{
+        padding: .8rem;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .navigation a:hover{
+        text-decoration: underline;
+        font-weight: 1000;
+        font-size: 1.125rem;
+    }
+
+    .navigation a:hover::after{
+        font-weight: 800;
+        content:"->"
+    }
+
+    .navigation a.active{
+        text-decoration: underline;
+        font-weight: 1000;
+    }
+
+    /* Disable hover for active links */
+    .navigation a.active:hover {
+    font-size: inherit;
+    }
+
+    .navigation a.active:hover::after {
+        content: none;
+    }
+
+    /* First fold image hover */
+    .hover-trigger {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hover-image {
+    display: none;
+    position: fixed;
+    width: 25%;
+    pointer-events: none;
+    z-index: -1;
+    }
+
+    /* Accordion */
+    .panel {
+        width: 50%;
+    }
+
+    /* Banner */
+    .banner{
+        height: 70vh;
+    }
+
+    .banner .slider{
+        top: 10%;
+        width: 200px;
+        height: 250px;
+        left: calc(50% - 100px);
+    }
+
+    .banner .slider .item{
+        transform:
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(550px);
+    }
+}
+
+/* Reduce Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+
+    .banner .slider {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: auto;
+        left: auto;
+        transform: none;
+        animation: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner .slider .item {
+        position: relative;
+        transform: none;
+    }
+
+    .banner .slider .item img{
+        width: 50%;
+        height: auto;
+    }
+
+    .banner .controls{
+        display: flex;
+    }
+
+    .hover-image {
+        display: none;
+    }
+
+    .hover-trigger:hover + .hover-image {
+        display: none;
+    }
+
+    .hover-trigger {
+        cursor: default;
+    }
+}
