@@ -322,7 +322,7 @@ hr{
     text-decoration: none;
 }
 
-.counter h4 {
+.counter p {
     margin: 0;
     font-size: 1.25rem;
 }
@@ -416,6 +416,11 @@ ul.staples li.staple:last-child {
     width: 100%;
     grid-column: 4/6;
     grid-row: 2/6;
+}
+
+/* Season headers */
+#first-block p{
+    font-size: 1.5rem;
 }
 
 /* Autumn images */
