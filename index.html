@@ -61,13 +61,13 @@
             <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs,  misty clouds and clear sky."></div>
             <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky."></div>
             <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field, with sun rays peeking from the back of a mountain."></div>
-            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Lush garden with vibrant yellow flowers, trimmed hedges, and a stone pathway under a bright blue sky with fluffy clouds."></div>
+            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Garden with yellow flowers, hedges, and a stone path under a blue sky."></div>
         </div>
         <div class="model"></div>
         <div class="controls">
-            <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+            <a class="prev" onclick="plusSlides(-1)" tabindex="0" aria-label="Previous slide" onkeydown="handleKeyboardEvent(event, -1)">&lt;</a>
             <div class="counter"><p id="slideCounter">1 / 10</p></div>
-            <a class="next" onclick="plusSlides(1)">&gt;</a>
+            <a class="next" onclick="plusSlides(1)" tabindex="0" aria-label="Next slide" onkeydown="handleKeyboardEvent(event, 1)">&gt;</a>
         </div>
         </section>
     <hr>
@@ -78,7 +78,7 @@
         <br>
         <div class="seasons">
             <a href = "spring.html">
-                <figure><img src="images/spring.png" alt="A green ceramic cup filled with a latte with leaf-shaped latte art on creamy foam."><figcaption><h3>spring -></h3></figcaption>
+                <figure><img src="images/spring.png" alt="Matcha latte with leaf art in a ceramic cup."><figcaption><h3>spring -></h3></figcaption>
                 </figure>
             </a>
             <a href = "summer.html"><figure><img src="images/summer.png" alt="A dark, ceramic mug filled with frothy, creamy coffee.">
@@ -234,6 +234,54 @@
             document.querySelector('.banner .next').onclick = () => showSlide(slideIndex + 1);
         }
         </script>
+
+<!-- Carousel for keyboard users -->
+<script>
+    // Handle keyboard navigation when keyboard users are detected
+    document.addEventListener('keydown', function(event) {
+        if (document.body.classList.contains('keyboard-user')) {
+            if (event.key === 'ArrowLeft') {
+                plusSlides(-1);  // For previous slide
+            } else if (event.key === 'ArrowRight') {
+                plusSlides(1);   // For next slide
+            }
+        }
+    });
+
+    // Adding tabindex to prev and next to ensure they are focusable
+    document.querySelectorAll('.prev, .next').forEach(link => {
+        link.setAttribute('tabindex', '0'); // Make focusable
+
+        // Add keyboard event listener to trigger slide change on Enter/Space
+        link.addEventListener('keydown', function(event) {
+            if (event.key === "Enter" || event.key === " ") {
+                // Trigger slide change on Enter or Space
+                plusSlides(event.target.classList.contains('prev') ? -1 : 1);
+            }
+        });
+    });
+
+    // The plusSlides function that changes slides (ensure this function exists in your code)
+    function plusSlides(n) {
+        const slides = document.querySelectorAll('.banner .slider .item');
+        let slideIndex = 0;
+
+        // Find the current visible slide
+        slides.forEach((slide, index) => {
+            if (slide.style.display === 'block') {
+                slideIndex = index;
+            }
+        });
+
+        // Change the slide
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[slideIndex].style.display = 'block';
+
+        // Update the slide counter
+        document.getElementById('slideCounter').textContent = `${slideIndex + 1} / ${slides.length}`;
+    }
+</script>
 
     <!-- Accordion from w3schools -->
     <script>

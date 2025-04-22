@@ -85,10 +85,11 @@
               <img src="images/snow3.jpeg" alt="Snow-covered rock on a snowy sidewalk with footprints.">
             </div>
         </div>
+        <div class="model"></div>
         <div class="controls">
-            <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+            <a class="prev" onclick="plusSlides(-1)" tabindex="0" aria-label="Previous slide" onkeydown="handleKeyboardEvent(event, -1)">&lt;</a>
             <div class="counter"><p id="slideCounter">1 / 3</p></div>
-            <a class="next" onclick="plusSlides(1)">&gt;</a>
+            <a class="next" onclick="plusSlides(1)" tabindex="0" aria-label="Next slide" onkeydown="handleKeyboardEvent(event, 1)">&gt;</a>
         </div>
     </section>
     </main>
@@ -109,38 +110,66 @@
     }
     </script>
 
-    <!-- Slideshow from w3schools -->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+<!-- Slideshow from w3schools -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
 
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
+        slides[slideIndex - 1].style.display = "block";
+
+        let counter = document.getElementById("slideCounter");
+        if (counter) {
+            counter.textContent = slideIndex + " / " + slides.length;
         }
+    }
+</script>
 
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+<!-- Carousel for keyboard users -->
+<script>
+    // Handle keyboard navigation when keyboard users are detected
+    document.addEventListener('keydown', function(event) {
+        if (document.body.classList.contains('keyboard-user')) {
+            if (event.key === 'ArrowLeft') {
+                plusSlides(-1);  // For previous slide
+            } else if (event.key === 'ArrowRight') {
+                plusSlides(1);   // For next slide
             }
-
-            slides[slideIndex - 1].style.display = "block";
-
-            let counter = document.getElementById("slideCounter");
-            if (counter) {
-                counter.textContent = slideIndex + " / " + slides.length;
-            }
         }
-    </script>
+    });
+    
+    // Adding tabindex to prev and next to ensure they are focusable
+    document.querySelectorAll('.prev, .next').forEach(link => {
+        link.setAttribute('tabindex', '0'); // Make focusable
+    
+        // Add keyboard event listener to trigger slide change on Enter/Space
+        link.addEventListener('keydown', function(event) {
+            if (event.key === "Enter" || event.key === " ") {
+                // Trigger slide change on Enter or Space
+                plusSlides(event.target.classList.contains('prev') ? -1 : 1);
+            }
+        });
+    });
+</script>
+
 
 </body>
 </html>
