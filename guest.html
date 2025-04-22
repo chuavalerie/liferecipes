@@ -16,8 +16,9 @@
 </head>
 <body class="default">
     <header id="navbar">
+        <a class = "skip" href="#main">Skip to Main content</a>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.svg"></a>
+            <a href="index.html"><img src="images/logo.svg" alt="Text logo that reads Life Recipes"></a>
         </div>
         <nav class="navigation">
             <a class="active" aria-current="page" href = "index.html">Home</a>
@@ -28,20 +29,24 @@
             <a href = "guest.html">Guest Recipes</a>
         </nav>
         <div class="toggleBox">
-            <a onclick="showMenu()" href="#"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+            <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg" alt="Menu icon"><img class="close" src="images/close.svg" alt="Close icon"></a>
         </div>
     </header>
 
+
     <div class="content">
+        <main id = "main">
+        <section>
         <h1>Guest Recipes</h1>
         <h5>Join me to embark on a new journey. Remember, you’re the star in your life. Wishing you a wonderful one.</h5>
         <hr>
+    </section>
     </div>
-
+</main>
     <footer class="footer">
         <h4>valeriechua</h4>
-        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg"></a>
-        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg"></a>
+        <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
+        <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
     </footer>
 
     <!-- Mobile navigation menu -->

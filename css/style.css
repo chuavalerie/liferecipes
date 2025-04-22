@@ -79,6 +79,11 @@ blockquote{
     margin-top: 1rem;
 }
 
+/* Landing font */
+#landing{
+    font-size: 1.5rem;
+}
+
 /* Page colour */
 /* Default fallback */
 .default, .navigation.now {
@@ -211,6 +216,7 @@ hr{
     padding: 16px;
     border-top: 1px solid black;
     margin-top: 6rem;
+    font-size: 1.25rem;
 }
 
 .footer a{

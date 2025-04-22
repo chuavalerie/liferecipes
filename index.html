@@ -29,24 +29,27 @@
             <a href = "guest.html">Guest Recipes</a>
         </nav>
         <div class="toggleBox">
-            <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg"><img class="close" src="images/close.svg"></a>
+            <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg" alt="Menu icon"><img class="close" src="images/close.svg" alt="Close icon"></a>
         </div>
     </header>
 
     <div class="content">
-    <main>
-        <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>.
-            And a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
+        <main id = "main">
+        <section>
+        <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>
+            and a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
             and that sort of thing ♡.</h1>
 
         <!-- Floating image that follows cursor -->
-        <img class="hover-image">
+        <img class="hover-image" alt="">
 
-        <h5>A collection of my ingredients—ideas, moments, feelings— the mix that makes a meaningful life.</h5>
+        <h2 id="landing">A collection of my ingredients—ideas, moments, feelings—the mix that makes a meaningful life.</h2>
         <hr>
+        </section>
     </div>
 
     <div class="content">
+        <section>
         <h2>What’s on my Kitchen Table</h2>
         <p>My mind’s erratic and change like the seasons, but for now here’s my jam. Obviously, nature.</p>
         <br>
@@ -69,74 +72,81 @@
             <div class="counter"><h4 id="slideCounter">1 / 10</h4></div>
             <a class="next" onclick="plusSlides(1)">&gt;</a>
         </div>
+        </section>
     </div>
     <hr>
 
     <div class="content">
+        <section>
         <h2>Get Inspired</h2>
         <p>There’s a season for everything.</p>
         <br>
         <div class="seasons">
-            <a href = "spring.html"><figure><img src="images/spring.png" alt="A green ceramic cup filled with a latte with leaf-shaped latte art on creamy foam.">
-                <figcaption><h4>spring -></h4></figcaption></a>
-            </figure>
+            <a href = "spring.html">
+                <figure><img src="images/spring.png" alt="A green ceramic cup filled with a latte with leaf-shaped latte art on creamy foam."><figcaption><h4>spring -></h4></figcaption>
+                </figure>
+            </a>
             <a href = "summer.html"><figure><img src="images/summer.png" alt="A dark, ceramic mug filled with frothy, creamy coffee.">
-                <figcaption><h4>summer -></h4></figcaption></a>
-            </figure>
+                <figcaption><h4>summer -></h4></figcaption>
+            </figure></a>
             <a href = "autumn.html"><figure><img src="images/autumn.png" alt="A frothy matcha latte in a ceramic cup with leaf-shaped latte art and swirling green and white patterns.">
-                <figcaption><h4>autumn -></h4></figcaption></a>
-            </figure>
+                <figcaption><h4>autumn -></h4></figcaption>
+            </figure></a>
             <a href = "winter.html"><figure><img src="images/winter.png" alt="A frothy latte in a rustic gray ceramic mug, with swirled milk foam.">
-                <figcaption><h4>winter -></h4></figcaption></a>
-            </figure>
+                <figcaption><h4>winter -></h4></figcaption>
+            </figure></a>
         </div>
         <hr>
+        </section>
     </div>
 
     <div class="content">
+    <section>
         <h2>Eye my Pantry Staples</h2>
         <p>My go-to grounding tools.</p>
         <ul class="staples">
             <li class="staple">
                 <img src="images/quill.svg" alt="Pixel icon of a quill dipped in a pot of ink.">
                 <div>
-                    <h4>Gratitude Journal</h4>
+                    <h3>Gratitude Journal</h3>
                     <p>Inspired by <a class="link" href="https://gretchenrubin.com/books/the-happiness-project/">Gretchen Rubin's The Happiness Project</a>, I have a similar variation of my own. </p>
                 </div>
             </li>
             <li class="staple">
                 <img src="images/letter.svg" alt="Pixel icon of a letter with a heart-shaped icon in an envelope.">
                 <div>
-                    <h4>Perk me up quotes</h4>
+                    <h3>Perk me up quotes</h3>
                     <p>I keep a stash of quotes to remind myself of the many blessings in life. Check out my kitchen jam but oh boy, I love <a class="link" href="https://www.instagram.com/tolivehappy_/">@tolivehappy_</a>!</p>
                 </div>
             </li>
             <li class="staple">
                 <img src="images/tree.svg" alt="Pixel icon of a tree.">
                 <div>
-                    <h4>Nature & Sunlight</h4>
+                    <h3>Nature & Sunlight</h3>
                     <p>Nothing reminds you better of how fragile life is than nature.</p>
                 </div>
             </li>
             <li class="staple">
                 <img src="images/cloud.svg" alt="Pixel icon of a cloud with the sun peeking behind.">
                 <div>
-                    <h4>Running</h4>
+                    <h3>Running</h3>
                     <p>There's something about the wind blowing in your face, the aches in your legs and just letting your mind and body be free.</p>
                 </div>
             </li>
             <li class="staple">
                 <img src="images/heart.svg" alt="">
                 <div>
-                    <h4>Friends & Family</h4>
+                    <h3>Friends & Family</h3>
                     <p>Keep people who you can be yourself with, close to you.</p>
                 </div>
             </li>
         </ul>
         <hr>
+    </section>
     </div>
 
     <div class="content">
+    <section>
         <h2>Ask Me</h2>
         <button class="accordion">What makes life worth living?</button>
         <div class="panel">
@@ -153,17 +163,20 @@
             <p>Lots of things, in particular — nature, sunlight, the people I love, archaeology, history, running, chick flicks, comedies — and the list goes on. Having a wonderful conversation with someone, or simply feeling that life is great, makes me happy too.</p>
         </div>
         <hr>
+    </section>
     </div>
 
     <div class="content">
+    <section>
         <h2>About Me</h2>
-        <p>I’m a big girl living in a huge place <i class="em em-us" aria-role="presentation" aria-label="United States Flag"></i> , from a tiny dot <i class="em em-flag-sg" aria-role="presentation" aria-label="Singapore Flag"></i> .</p>
+        <p>I’m a big girl living in a huge place <i class="em em-us" role="img" aria-label="United States Flag"></i> , from a tiny dot <i class="em em-flag-sg" role="img" aria-label="Singapore Flag"></i> .</p>
         <img class="me" src="images/me.png" alt="A 3D female character with dark hair tied up in a ponytail, with pink glasses, checkered pink jacket, and black pants standing cheerfully against a mountain view.">
         <blockquote>“Who says only the big things in life are worth celebrating?” - Me</blockquote>
+    </section>
     </div>
 </main>
     <footer class="footer">
-        <h4>valeriechua</h4>
+        <p>valeriechua</p>
         <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
         <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
     </footer>
