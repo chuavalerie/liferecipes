@@ -52,16 +52,16 @@
         <br>
         <div class="banner">
             <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="images/mountain1.jpg" alt="A person on a hillside photographing a misty volcanic landscape at sunrise."></div>
-            <div class="item" style="--position: 2"><img src="images/mountain2.jpg" alt="A bright blue sky with scattered clouds over a road, cars, trees, and buildings."></div>
-            <div class="item" style="--position: 3"><img src="images/mountain3.jpg" alt="Sunset over a grassy field, casting light golden long shadows."></div>
-            <div class="item" style="--position: 4"><img src="images/mountain4.jpg" alt="Scenic view of misty volcanic landscape partially covered by fluffy white clouds at sunrise."></div>
-            <div class="item" style="--position: 5"><img src="images/mountain5.jpg" alt="Trees viewed from below, their branches and leaves forming a lace-like pattern against the sky."></div>
-            <div class="item" style="--position: 6"><img src="images/mountain6.jpg" alt="Open rural road under a clear blue sky with a few pink clouds at sunset."></div>
-            <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs,  misty clouds and clear sky."></div>
-            <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky."></div>
-            <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field, with sun rays peeking from the back of a mountain."></div>
-            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Garden with yellow flowers, hedges, and a stone path under a blue sky."></div>
+            <div class="item" style="--position: 1"><img src="images/mountain1.jpg" alt="A person on a hillside photographing a misty volcanic landscape at sunrise." tabindex="0"></div>
+            <div class="item" style="--position: 2"><img src="images/mountain2.jpg" alt="A bright blue sky with scattered clouds over a road, cars, trees, and buildings." tabindex="0"></div>
+            <div class="item" style="--position: 3"><img src="images/mountain3.jpg" alt="Sunset over a grassy field, casting light golden long shadows." tabindex="0"></div>
+            <div class="item" style="--position: 4"><img src="images/mountain4.jpg" alt="Scenic view of misty volcanic landscape partially covered by fluffy white clouds at sunrise." tabindex="0"></div>
+            <div class="item" style="--position: 5"><img src="images/mountain5.jpg" alt="Trees viewed from below, their branches and leaves forming a lace-like pattern against the sky." tabindex="0"></div>
+            <div class="item" style="--position: 6"><img src="images/mountain6.jpg" alt="Open rural road under a clear blue sky with a few pink clouds at sunset." tabindex="0"></div>
+            <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs,  misty clouds and clear sky." tabindex="0"></div>
+            <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky." tabindex="0"></div>
+            <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field, with sun rays peeking from the back of a mountain." tabindex="0"></div>
+            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Garden with yellow flowers, hedges, and a stone path under a blue sky." tabindex="0"></div>
         </div>
         <div class="model"></div>
         <div class="controls">
@@ -181,7 +181,7 @@
     }
     </script>
 
-    <!-- Disable 3d for reduced motion -->
+    <!-- Disable 3d for low motion-->
     <script>
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             enableBannerSlideshow();
@@ -207,7 +207,7 @@
         </script>
 
     <!-- Disable 3d for screen reader users -->
-    <script>
+    <!-- <script>
         // Detect first keyboard interaction from ChatGPT
         window.addEventListener('keydown', function(e) {
             if (e.key === 'Tab') {
@@ -233,7 +233,7 @@
             document.querySelector('.banner .prev').onclick = () => showSlide(slideIndex - 1);
             document.querySelector('.banner .next').onclick = () => showSlide(slideIndex + 1);
         }
-        </script>
+        </script> -->
 
 <!-- Carousel for keyboard users -->
 <script>

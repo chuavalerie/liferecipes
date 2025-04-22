@@ -196,7 +196,8 @@ body.no-scroll {
 .seasons{
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end
+    align-items: flex-end;
+    width: 90%;
 }
 
 figure{
@@ -585,6 +586,24 @@ ol li{
             rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
             translateZ(550px);
     }
+
+    li.staple img{
+        width: 5%;
+    }
+
+    .me{
+        width: 30%;
+    }
+
+    .image-stack{
+        width: 50%;
+    }
+
+    #carou-desk img{
+        width: 50%;
+    }
+
+
 }
 
 /* Reduce Motion */
@@ -592,6 +611,10 @@ ol li{
 @media (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
+    }
+
+    .banner{
+        height: auto;
     }
 
     .banner .slider {
@@ -613,7 +636,7 @@ ol li{
     }
 
     .banner .slider .item img{
-        width: 50%;
+        width: 80%;
         height: auto;
     }
 
