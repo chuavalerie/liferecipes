@@ -13,6 +13,14 @@ a:focus {
     outline-offset: 2px;
 }
 
+.keyboard-user .navigation a.active:hover {
+font-size: inherit;
+}
+
+.keyboard-user .navigation a.active:hover::after {
+    content: none;
+}
+
 /* Fonts */
 h1,h2,h3,h4,h5,a{
     font-family: "DotGothic16", sans-serif;

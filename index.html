@@ -26,30 +26,27 @@
             <a href = "summer.html">Summer</a>
             <a href = "autumn.html">Autumn</a>
             <a href = "winter.html">Winter</a>
-            <a href = "guest.html">Guest Recipes</a>
+            <!-- <a href = "guest.html">Guest Recipes</a> -->
         </nav>
         <div class="toggleBox">
             <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg" alt="Menu icon"><img class="close" src="images/close.svg" alt="Close icon"></a>
         </div>
     </header>
 
-    <div class="content">
-        <main id = "main">
-        <section>
-        <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>
-            and a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
-            and that sort of thing ♡.</h1>
+    <main id = "main">
+        <section class="content">
+            <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>
+                and a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
+                and that sort of thing ♡.</h1>
 
-        <!-- Floating image that follows cursor -->
-        <img class="hover-image" alt="">
+            <!-- Floating image that follows cursor -->
+            <img class="hover-image" alt="">
 
-        <h2 id="landing">A collection of my ingredients—ideas, moments, feelings—the mix that makes a meaningful life.</h2>
-        <hr>
+            <h2 id="landing">A collection of my ingredients—ideas, moments, feelings—the mix that makes a meaningful life.</h2>
+            <hr>
         </section>
-    </div>
 
-    <div class="content">
-        <section>
+        <section class="content">
         <h2>What’s on my Kitchen Table</h2>
         <p>My mind’s erratic and change like the seasons, but for now here’s my jam. Obviously, nature.</p>
         <br>
@@ -73,11 +70,9 @@
             <a class="next" onclick="plusSlides(1)">&gt;</a>
         </div>
         </section>
-    </div>
     <hr>
 
-    <div class="content">
-        <section>
+        <section class="content">
         <h2>Get Inspired</h2>
         <p>There’s a season for everything.</p>
         <br>
@@ -98,10 +93,8 @@
         </div>
         <hr>
         </section>
-    </div>
 
-    <div class="content">
-    <section>
+    <section class="content">
         <h2>Eye my Pantry Staples</h2>
         <p>My go-to grounding tools.</p>
         <ul class="staples">
@@ -143,10 +136,8 @@
         </ul>
         <hr>
     </section>
-    </div>
 
-    <div class="content">
-    <section>
+    <section class="content">
         <h2>Ask Me</h2>
         <button class="accordion">What makes life worth living?</button>
         <div class="panel">
@@ -164,17 +155,16 @@
         </div>
         <hr>
     </section>
-    </div>
 
-    <div class="content">
-    <section>
+    <section class="content">
         <h2>About Me</h2>
         <p>I’m a big girl living in a huge place <i class="em em-us" role="img" aria-label="United States Flag"></i> , from a tiny dot <i class="em em-flag-sg" role="img" aria-label="Singapore Flag"></i> .</p>
         <img class="me" src="images/me.png" alt="A 3D female character with dark hair tied up in a ponytail, with pink glasses, checkered pink jacket, and black pants standing cheerfully against a mountain view.">
         <blockquote>“Who says only the big things in life are worth celebrating?” - Me</blockquote>
     </section>
-    </div>
+
 </main>
+
     <footer class="footer">
         <p>valeriechua</p>
         <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
@@ -196,6 +186,35 @@
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             enableBannerSlideshow();
         }
+
+        function enableBannerSlideshow() {
+            const slides = document.querySelectorAll('.banner .slider .item');
+            let slideIndex = 0;
+
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[slideIndex].style.display = 'block';
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.style.display = 'none');
+                slideIndex = (n + slides.length) % slides.length;
+                slides[slideIndex].style.display = 'block';
+                document.getElementById('slideCounter').textContent = `${slideIndex + 1} / ${slides.length}`;
+            }
+
+            document.querySelector('.banner .prev').onclick = () => showSlide(slideIndex - 1);
+            document.querySelector('.banner .next').onclick = () => showSlide(slideIndex + 1);
+        }
+        </script>
+
+    <!-- Disable 3d for screen reader users -->
+    <script>
+        // Detect first keyboard interaction from ChatGPT
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-user');
+                enableBannerSlideshow();
+            }
+        });
 
         function enableBannerSlideshow() {
             const slides = document.querySelectorAll('.banner .slider .item');

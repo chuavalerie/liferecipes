@@ -26,16 +26,15 @@
             <a href = "summer.html">Summer</a>
             <a href = "autumn.html">Autumn</a>
             <a class="active" aria-current="page" href = "winter.html">Winter</a>
-            <a href = "guest.html">Guest Recipes</a>
+            <!-- <a href = "guest.html">Guest Recipes</a> -->
         </nav>
         <div class="toggleBox">
             <a onclick="showMenu()" href="#" aria-label="Toggle menu"><img class="menu" src="images/menu.svg" alt="Menu icon"><img class="close" src="images/close.svg" alt="Close icon"></a>
         </div>
     </header>
 
-    <div class="content">
         <main id = "main">
-        <section>
+        <section class="content">
         <h1>Winter☃</h1>
         <h2>When everything fades to black and white, you start to see the grey. Winter may feel lonely, but you come to realise — you are all the comfort you need.</h2>
         <br>
@@ -43,10 +42,8 @@
         <div class="first-fold"><img src="images/winter1.jpeg" alt="Snow-covered evergreen shrubs with dark green needles peek through."><img src="images/winter2.jpeg" alt="Snowy courtyard with footprints, framed by gray buildings and bare tree branches."></div>
         <hr>
     <section>
-    </div>
 
-    <div class="content">
-    <section>
+    <section class="content">
         <h2>A recipe for gratitude</h2>
         <p>You’re feeling tired and dreary, but then you notice greens, reds, and tiny buds sprouting. You look up—flowers, oh flowers, all around.</p>
         <br>
@@ -70,10 +67,8 @@
         </ol>
         <hr>
     </section>
-    </div>
 
-    <div class="content">
-    <section>
+    <section class="content">
         <h2>Featured sights</h2>
         <p>I spy with my little eye the many nuances winter brings — the white, the dull, and everything in between. Have you ever stopped to notice what they might have once been? Their original shapes, their fading bodies, and holes that whisper of what was once so very green.</p>
         <div class="slideshow">
@@ -96,11 +91,10 @@
             <a class="next" onclick="plusSlides(1)">&gt;</a>
         </div>
     </section>
-    </div>
-
     </main>
+
     <footer class="footer">
-        <h4>valeriechua</h4>
+        <p>valeriechua</p>
         <a href = "https://www.linkedin.com/in/chuavalerie/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a>
         <a href = "https://www.instagram.com/vollycol/?hl=en" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
     </footer>
@@ -113,39 +107,6 @@
         document.querySelector('.close').classList.toggle('show');
         document.body.classList.toggle('no-scroll');
     }
-    </script>
-
-    <!-- Slideshow from w3schools -->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-
-            let counter = document.getElementById("slideCounter");
-            if (counter) {
-                counter.textContent = slideIndex + " / " + slides.length;
-            }
-        }
     </script>
 
     <!-- Slideshow from w3schools -->
