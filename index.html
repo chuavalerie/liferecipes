@@ -18,7 +18,7 @@
     <header id="navbar">
         <a class = "skip" href="#main">Skip to Main content</a>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.svg" alt="Text logo that reads Life Recipes"></a>
+            <img src="images/logo.svg" alt="Text logo that reads Life Recipes">
         </div>
         <nav class="navigation">
             <a class="active" aria-current="page" href = "index.html">Home</a>
@@ -35,40 +35,41 @@
 
     <main id = "main">
         <section class="content">
-            <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" alt="Falling autumn leaves scattered around">seasons</span>
-                and a <span class="hover-trigger" data-image="images/fireplace.png" alt="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
+            <h1>It's nice having <span class="hover-trigger" data-image="images/leaves.png" aria-label="Falling autumn leaves scattered around">seasons</span>
+                and a <span class="hover-trigger" data-image="images/fireplace.png" aria-label="A burning fireplace, with various plush touys placed on the mantel and a flag banner strung across it.">fireplace,</span>
                 and that sort of thing ♡.</h1>
 
             <!-- Floating image that follows cursor -->
-            <img class="hover-image" alt="">
+            <img class="hover-image" src="#" alt="">
 
             <h2 id="landing">A collection of my ingredients—ideas, moments, feelings—the mix that makes a meaningful life.</h2>
             <hr>
         </section>
 
         <section class="content">
-        <h2>What’s on my Kitchen Table</h2>
-        <p>My mind’s erratic and change like the seasons, but for now here’s my jam. Obviously, nature.</p>
-        <br>
-        <div class="banner" aria-label="Rotating banner of ten landscape photos">
-            <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="images/mountain1.jpg" alt="A person on a hillside photographing a misty volcanic landscape at sunrise."></div>
-            <div class="item" style="--position: 2"><img src="images/mountain2.jpg" alt="A bright blue sky with scattered clouds over a road, cars, trees, and buildings."></div>
-            <div class="item" style="--position: 3"><img src="images/mountain3.jpg" alt="Sunset over a grassy field, casting light golden long shadows."></div>
-            <div class="item" style="--position: 4"><img src="images/mountain4.jpg" alt="Scenic view of misty volcanic landscape partially covered by fluffy white clouds at sunrise."></div>
-            <div class="item" style="--position: 5"><img src="images/mountain5.jpg" alt="Trees viewed from below, their branches and leaves forming a lace-like pattern against the sky."></div>
-            <div class="item" style="--position: 6"><img src="images/mountain6.jpg" alt="Open rural road under a clear blue sky with a few pink clouds at sunset."></div>
-            <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs,  misty clouds and clear sky."></div>
-            <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky."></div>
-            <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field, with sun rays peeking from the back of a mountain."></div>
-            <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Garden with yellow flowers, hedges, and a stone path under a blue sky."></div>
-        </div>
-        <div class="model"></div>
-        <div class="controls">
-            <a class="prev" onclick="plusSlides(-1)" tabindex="0" aria-label="Previous slide" onkeydown="handleKeyboardEvent(event, -1)">&lt;</a>
-            <div class="counter"><p id="slideCounter">1 / 10</p></div>
-            <a class="next" onclick="plusSlides(1)" tabindex="0" aria-label="Next slide" onkeydown="handleKeyboardEvent(event, 1)">&gt;</a>
-        </div>
+            <h2>What’s on my Kitchen Table</h2>
+            <p>My mind’s erratic and change like the seasons, but for now here’s my jam. Obviously, nature.</p>
+            <br>
+            <div class="banner" role="region" aria-label="Banner showcasing rotating nature imagery that reflects personal values">
+                <div class="slider" style="--quantity: 10">
+                    <div class="item" style="--position: 1"><img src="images/mountain1.jpg" alt="A person on a hillside photographing a misty volcanic landscape at sunrise."></div>
+                    <div class="item" style="--position: 2"><img src="images/mountain2.jpg" alt="A bright blue sky with scattered clouds over a road, cars, trees, and buildings."></div>
+                    <div class="item" style="--position: 3"><img src="images/mountain3.jpg" alt="Sunset over a grassy field, casting light golden long shadows."></div>
+                    <div class="item" style="--position: 4"><img src="images/mountain4.jpg" alt="Scenic view of misty volcanic landscape partially covered by fluffy white clouds at sunrise."></div>
+                    <div class="item" style="--position: 5"><img src="images/mountain5.jpg" alt="Trees viewed from below, their branches and leaves forming a lace-like pattern against the sky."></div>
+                    <div class="item" style="--position: 6"><img src="images/mountain6.jpg" alt="Open rural road under a clear blue sky with a few pink clouds at sunset."></div>
+                    <div class="item" style="--position: 7"><img src="images/mountain7.jpg" alt="Mountain landscape with a turquoise lake, rocky cliffs,  misty clouds and clear sky."></div>
+                    <div class="item" style="--position: 8"><img src="images/mountain8.jpg" alt="Mountain landscape with layers of blue-hued ridges under a dramatic cloudy sky."></div>
+                    <div class="item" style="--position: 9"><img src="images/mountain9.jpg" alt="Sunset over a grassy field, with sun rays peeking from the back of a mountain."></div>
+                    <div class="item" style="--position: 10"><img src="images/mountain10.jpg" alt="Garden with yellow flowers, hedges, and a stone path under a blue sky."></div>
+                </div>
+            </div>
+            <div class="model"></div>
+            <div class="controls">
+                <a class="prev" onclick="plusSlides(-1)" tabindex="0" aria-label="Previous slide" onkeydown="handleKeyboardEvent(event, -1)">&lt;</a>
+                <div class="counter"><p id="slideCounter">1 / 10</p></div>
+                <a class="next" onclick="plusSlides(1)" tabindex="0" aria-label="Next slide" onkeydown="handleKeyboardEvent(event, 1)">&gt;</a>
+            </div>
         </section>
     <hr>
 
@@ -99,28 +100,28 @@
         <p>My go-to grounding tools.</p>
         <ul class="staples">
             <li class="staple">
-                <img src="images/quill.svg" alt="Pixel icon of a quill dipped in a pot of ink.">
+                <img src="images/quill.svg" alt="">
                 <div>
                     <h3>Gratitude Journal</h3>
                     <p>Inspired by <a class="link" href="https://gretchenrubin.com/books/the-happiness-project/">Gretchen Rubin's The Happiness Project</a>, I have a similar variation of my own. </p>
                 </div>
             </li>
             <li class="staple">
-                <img src="images/letter.svg" alt="Pixel icon of a letter with a heart-shaped icon in an envelope.">
+                <img src="images/letter.svg" alt="">
                 <div>
                     <h3>Perk me up quotes</h3>
                     <p>I keep a stash of quotes to remind myself of the many blessings in life. Check out my kitchen jam but oh boy, I love <a class="link" href="https://www.instagram.com/tolivehappy_/">@tolivehappy_</a>!</p>
                 </div>
             </li>
             <li class="staple">
-                <img src="images/tree.svg" alt="Pixel icon of a tree.">
+                <img src="images/tree.svg" alt="">
                 <div>
                     <h3>Nature & Sunlight</h3>
                     <p>Nothing reminds you better of how fragile life is than nature.</p>
                 </div>
             </li>
             <li class="staple">
-                <img src="images/cloud.svg" alt="Pixel icon of a cloud with the sun peeking behind.">
+                <img src="images/cloud.svg" alt="">
                 <div>
                     <h3>Running</h3>
                     <p>There's something about the wind blowing in your face, the aches in your legs and just letting your mind and body be free.</p>
